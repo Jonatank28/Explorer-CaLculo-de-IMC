@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #09203f 0%, #537895 100%);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 48px 64px 64px;
+    border-radius: 6px;
+}
+.container h1{
+    font-size: 32px;
+    color: #0C3440;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+}
+
+form label{
+    font-size: 13px;
+    color: #00453A;
+    margin-bottom: 3px;
+}
+form input{
+    font-size: 13px;
+    color: #00453A;
+    margin-bottom: 8px;
+    height: 26px;
+    background-color: #DCE2E9;
+    border: 1px solid #bec6c9;
+    border-radius: 4px;
+    padding-left: 6px;
+}
+
+form input::placeholder{
+    padding-left: 4px;
+}
+form button{
+    margin-top: 20px;
+    color: #ffffff;
+    background: #02799D;
+    border-radius: 4px;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ;
+}
+form button:hover{
+    background: #043c4d;
+}
+
+.msgErro{
+    position: absolute;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+    background: #F03E3E;
+    display: inline-flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px);
+    transition: transform 0.5s;
+}
+.msgErro.open{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+.msgErro p{
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.hidden{
+    display: none;
+}
+
+/* Modal */
+
+.modal{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+}
+.modal.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modalInterno{
+    position: relative;
+}
+.modalInterno button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
